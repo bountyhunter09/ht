@@ -1,0 +1,8 @@
+# Disable direct access to all files in the pwd directory
+Order Deny,Allow
+Deny from all
+
+# Prevent uploading or editing files via HTTP methods like PUT, GET, DELETE
+<Limit PUT DELETE POST>
+    Deny from all
+</Limit>
